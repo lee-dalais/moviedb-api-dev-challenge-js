@@ -6,8 +6,8 @@ class Principal {
         this.username = null;
 
         if (attributes) {
-            this.authenticated = attributes.authenticated;
-            this.username = attributes.username;
+            this.authenticated = attributes.authenticated || false;
+            this.username = attributes.username || null;
         }
     }
 

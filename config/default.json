@@ -1,0 +1,13 @@
+{
+  "server": {
+    "port": 3000
+  },
+
+  "mongo": {
+    "db": "mongodb://localhost/moviedb-challenge"
+  },
+
+  "moviedb": {
+    "apiKey": "8806289684a57014fc8d7bffd258a3f4"
+  }
+}

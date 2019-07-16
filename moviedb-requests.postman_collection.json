@@ -1,0 +1,222 @@
+{
+	"info": {
+		"_postman_id": "3af66cf1-6c9d-4446-ac95-e71d0fd9a667",
+		"name": "moviedb-requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Movie - Search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/movies?q=road",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "road"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Movie - Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/movies/76341",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies",
+						"76341"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User - List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/admin/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"admin",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User - New",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"another\",\n\t\"firstName\": \"Timmy\",\n\t\"lastName\": \"Ray\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/admin/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"admin",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User - List Favorites",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "x-api-key",
+						"value": "1563293553855",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/users/5d2dcda2523bc2c6881c3ce2/favorites",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"5d2dcda2523bc2c6881c3ce2",
+						"favorites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User - New Favorite",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"movieID\": 76341\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/5d2dcda2523bc2c6881c3ce2/favorites",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"5d2dcda2523bc2c6881c3ce2",
+						"favorites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "APP - Authorization",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "APP - Authorization Expire",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "1563293553855",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

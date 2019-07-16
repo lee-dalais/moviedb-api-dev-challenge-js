@@ -13,7 +13,6 @@ exports.listFavorites = async (req, res) => {
                 message: 'not found'
             }));
         }
-        console.log(document)
     } catch (err) {
         return res.status(404).end(JSON.stringify({
             message: 'not found'
@@ -25,7 +24,6 @@ exports.listFavorites = async (req, res) => {
 
 exports.createFavorite = async (req, res) => {
     let document;
-
 
     try {
         assert.exists(req.body.movieID);

@@ -1,1 +1,10 @@
-# moviedb-api-dev-challenge
+# Moviedb API Challenge
+
+## Getting Started
+
+### Prerequisites
+MongoDB
+
+Node
+
+MovieDB API Key

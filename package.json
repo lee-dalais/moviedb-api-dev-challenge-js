@@ -20,7 +20,7 @@
     "bluebird": "^3.5.5",
     "body-parser": "^1.19.0",
     "chai": "^4.2.0",
-    "config": "^3.2.0",
+    "config": "^3.3.8",
     "connect-mongo": "^3.0.0",
     "cookies": "^0.7.3",
     "express": "^4.17.1",
